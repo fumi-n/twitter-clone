@@ -1,25 +1,38 @@
-# README
+#commnds
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+##git 
 
-Things you may want to cover:
+git add -A && git commit -a -m 'commits' && git diff HEAD^
+git diff --name-only HEAD^
 
-* Ruby version
+##rails s
 
-* System dependencies
+rails s -b $IP -p $PORT
 
-* Configuration
 
-* Database creation
+##DB  
 
-* Database initialization
+rails db:migrate
 
-* How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
+##add Column
 
-* Deployment instructions
+rails g migration Addカラム名(最初大文字)Toテーブル名(最初大文字) カラム名:カラムのデータ型
 
-* ...
-# twitter-clone
+rails db:migrate
+
+validates :title, presence: true, length: { maximum: 255 }
+
+rails g migration AddstatusTotasks status:string
+rails g migration AddStatusToTasks status:string
+
+##git branch
+git branch
+git branck dev
+
+git checkout dev
+
+git merge 
+
+
+
